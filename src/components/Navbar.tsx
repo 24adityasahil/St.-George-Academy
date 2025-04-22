@@ -1,7 +1,13 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, GalleryHorizontal, DollarSign, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +36,24 @@ const Navbar = () => {
           <a href="#campus" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
             Campus Life
           </a>
+          <a href="/gallery" className="text-gray-700 hover:text-school-primary font-medium transition-colors flex items-center gap-2">
+            <GalleryHorizontal size={18} />
+            Gallery
+          </a>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium transition-colors flex items-center gap-2">
+              <DollarSign size={18} />
+              Fee Structure
+              <ChevronDown size={16} />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-48 bg-white">
+              {[...Array(10)].map((_, i) => (
+                <DropdownMenuItem key={i + 1} className="cursor-pointer">
+                  Grade {i + 1} Fee Structure
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
           <a href="#contact" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
             Contact
           </a>
@@ -76,6 +100,28 @@ const Navbar = () => {
             >
               Campus Life
             </a>
+            <a 
+              href="/gallery" 
+              className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors flex items-center gap-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <GalleryHorizontal size={18} />
+              Gallery
+            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors flex items-center gap-2 w-full text-left">
+                <DollarSign size={18} />
+                Fee Structure
+                <ChevronDown size={16} className="ml-auto" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-48 bg-white">
+                {[...Array(10)].map((_, i) => (
+                  <DropdownMenuItem key={i + 1} className="cursor-pointer">
+                    Grade {i + 1} Fee Structure
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a 
               href="#contact" 
               className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors"
