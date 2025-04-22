@@ -1,8 +1,10 @@
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Programs from "@/components/Programs";
 import Campus from "@/components/Campus";
+import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -14,6 +16,7 @@ const Index = () => {
       <About />
       <Programs />
       <Campus />
+      <Gallery />
       <Contact />
       <Footer />
     </div>
