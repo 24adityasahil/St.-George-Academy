@@ -20,7 +20,7 @@ const Programs = () => {
     {
       id: 3,
       title: "High School",
-      grades: "Grades 9-12",
+      grades: "Grades 9-10",
       description: "Preparing students for college and beyond with rigorous academic programs.",
       features: ["Advanced Placement", "College Preparation", "Career Exploration", "Extracurricular Activities"]
     }

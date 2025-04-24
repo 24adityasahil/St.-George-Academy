@@ -9,7 +9,7 @@ const Campus = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-school-dark">Campus Life</h2>
           <p className="text-gray-600">
-            At XYZ School, we believe in providing a well-rounded educational experience 
+            At St. George Academy, we believe in providing a well-rounded educational experience 
             that extends beyond the classroom.
           </p>
         </div>
@@ -97,10 +97,10 @@ const Campus = () => {
         </div>
 
         <div className="bg-gradient-to-r from-school-primary to-school-dark rounded-lg p-8 md:p-12 text-white text-center">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">Experience XYZ School</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Experience St. George Academy</h3>
           <p className="text-white/90 max-w-2xl mx-auto mb-6">
             We invite you to visit our campus and experience the vibrant learning
-            environment that makes XYZ School special.
+            environment that makes St. George Academy special.
           </p>
           <button className="bg-white text-school-primary hover:bg-school-secondary hover:text-school-dark transition-colors py-3 px-8 rounded-md font-medium">
             Schedule a Campus Tour

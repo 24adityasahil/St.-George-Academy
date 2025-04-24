@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-school-dark">Contact Us</h2>
           <p className="text-gray-600">
-            We're here to answer your questions and help you learn more about XYZ School.
+            We're here to answer your questions and help you learn more about St. George Academy.
           </p>
         </div>
 
@@ -27,9 +27,9 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-school-dark mb-2">Our Location</h3>
                   <p className="text-gray-600">
-                    123 Education Avenue<br />
-                    Academic Heights<br />
-                    Knowledge City, KC 12345
+                    Purandarpur, <br />
+                    FCI Road, <br />
+                    Near Arjun Vihar Apartment, Patna
                   </p>
                 </div>
               </div>
@@ -46,11 +46,11 @@ const Contact = () => {
                   <h3 className="text-lg font-semibold text-school-dark mb-2">Email Us</h3>
                   <p className="text-gray-600">
                     <a href="mailto:admissions@xyzschool.edu" className="hover:text-school-primary transition-colors">
-                      admissions@xyzschool.edu
+                      StGeorgeAcademy.edu
                     </a>
                     <br />
                     <a href="mailto:info@xyzschool.edu" className="hover:text-school-primary transition-colors">
-                      info@xyzschool.edu
+                      info@school.edu
                     </a>
                   </p>
                 </div>
@@ -67,12 +67,8 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-school-dark mb-2">Call Us</h3>
                   <p className="text-gray-600">
-                    <a href="tel:+15551234567" className="hover:text-school-primary transition-colors">
-                      Main Office: (555) 123-4567
-                    </a>
-                    <br />
                     <a href="tel:+15557654321" className="hover:text-school-primary transition-colors">
-                      Admissions: (555) 765-4321
+                      Admissions: 9801132202
                     </a>
                   </p>
                 </div>

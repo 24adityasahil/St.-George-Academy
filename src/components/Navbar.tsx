@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="flex items-center">
           <span className="font-playfair text-2xl font-bold text-school-primary">
-            XYZ School
+            ST. George Academy
           </span>
         </a>
 
@@ -37,19 +37,19 @@ const Navbar = () => {
             Campus Life
           </a>
           <a href="/gallery" className="text-gray-700 hover:text-school-primary font-medium transition-colors flex items-center gap-2">
-            <GalleryHorizontal size={18} />
+            {/* <GalleryHorizontal size={18} /> */}
             Gallery
           </a>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium transition-colors flex items-center gap-2">
-              <DollarSign size={18} />
+              {/* <DollarSign size={18} /> */}
               Fee Structure
               <ChevronDown size={16} />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-48 bg-white">
               {[...Array(10)].map((_, i) => (
                 <DropdownMenuItem key={i + 1} className="cursor-pointer">
-                  Grade {i + 1} Fee Structure
+                  Class {i + 1} 
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
@@ -105,19 +105,19 @@ const Navbar = () => {
               className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors flex items-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              <GalleryHorizontal size={18} />
+              {/* <GalleryHorizontal size={18} /> */}
               Gallery
             </a>
             <DropdownMenu>
               <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors flex items-center gap-2 w-full text-left">
-                <DollarSign size={18} />
+                {/* <DollarSign size={18} /> */}
                 Fee Structure
                 <ChevronDown size={16} className="ml-auto" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-48 bg-white">
                 {[...Array(10)].map((_, i) => (
                   <DropdownMenuItem key={i + 1} className="cursor-pointer">
-                    Grade {i + 1} Fee Structure
+                    Class {i + 1} 
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
