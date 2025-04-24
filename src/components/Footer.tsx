@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold mb-4 font-playfair">XYZ School</h3>
+            <h3 className="text-xl font-bold mb-4 font-playfair">St. George Academy</h3>
             <p className="text-gray-300 mb-4">
               Excellence in education since 1985. Empowering students to reach
               their full potential.
