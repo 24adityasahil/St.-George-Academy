@@ -1,7 +1,6 @@
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, GalleryHorizontal, DollarSign, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,7 +20,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="flex items-center">
           <span className="font-playfair text-2xl font-bold text-school-primary">
-            XYZ School
+            St. George Academy
           </span>
         </a>
 
@@ -36,20 +35,20 @@ const Navbar = () => {
           <a href="#campus" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
             Campus Life
           </a>
-          <a href="/gallery" className="text-gray-700 hover:text-school-primary font-medium transition-colors flex items-center gap-2">
-            <GalleryHorizontal size={18} />
+          <a href="/gallery" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
             Gallery
           </a>
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium transition-colors flex items-center gap-2">
-              <DollarSign size={18} />
+            <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium transition-colors">
               Fee Structure
-              <ChevronDown size={16} />
+              <ChevronDown size={16} className="inline ml-1" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-48 bg-white">
               {[...Array(10)].map((_, i) => (
                 <DropdownMenuItem key={i + 1} className="cursor-pointer">
-                  Grade {i + 1} Fee Structure
+                  <a href={`/fee-structure#grade-${i + 1}`} className="w-full">
+                    Grade {i + 1} Fee Structure
+                  </a>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
@@ -57,21 +56,16 @@ const Navbar = () => {
           <a href="#contact" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
             Contact
           </a>
-          <Button className="bg-school-primary hover:bg-school-primary/90 text-white">
-            Apply Now
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <Button 
-            variant="ghost" 
-            size="icon" 
+          <button 
             onClick={toggleMenu} 
-            className="text-gray-700"
+            className="text-gray-700 p-2"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          </button>
         </div>
       </div>
 
@@ -102,22 +96,22 @@ const Navbar = () => {
             </a>
             <a 
               href="/gallery" 
-              className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors flex items-center gap-2"
+              className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              <GalleryHorizontal size={18} />
               Gallery
             </a>
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors flex items-center gap-2 w-full text-left">
-                <DollarSign size={18} />
+              <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors text-left w-full">
                 Fee Structure
-                <ChevronDown size={16} className="ml-auto" />
+                <ChevronDown size={16} className="inline ml-1" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-48 bg-white">
                 {[...Array(10)].map((_, i) => (
                   <DropdownMenuItem key={i + 1} className="cursor-pointer">
-                    Grade {i + 1} Fee Structure
+                    <a href={`/fee-structure#grade-${i + 1}`} className="w-full">
+                      Grade {i + 1} Fee Structure
+                    </a>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -129,9 +123,6 @@ const Navbar = () => {
             >
               Contact
             </a>
-            <Button className="bg-school-primary hover:bg-school-primary/90 text-white w-full">
-              Apply Now
-            </Button>
           </div>
         </div>
       )}
