@@ -28,7 +28,7 @@ const Administrators = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed">
-                "Welcome to XYZ School, where we believe in nurturing not just academic excellence, 
+                "Welcome to St. George Academy, where we believe in nurturing not just academic excellence, 
                 but also character, creativity, and compassion. Our commitment is to provide a 
                 holistic education that prepares students for the challenges of tomorrow. 
                 I'm proud of the supportive learning environment we've created, where every student 
@@ -53,7 +53,7 @@ const Administrators = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed">
-                "At XYZ School, we're committed to educational innovation and excellence. 
+                "At St. George Academy, we're committed to educational innovation and excellence. 
                 Our curriculum is designed to inspire curiosity and develop critical thinking skills
                 that will serve students throughout their lives. We work closely with families to
                 ensure that each child receives the support and guidance they need to thrive

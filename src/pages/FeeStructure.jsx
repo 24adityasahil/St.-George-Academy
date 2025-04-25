@@ -45,7 +45,7 @@ const FeeStructure = () => {
             </TableHeader>
             <TableBody>
               {grades.map((grade) => (
-                <TableRow key={grade.grade} id={`grade-${grade.grade}`}>
+                <TableRow key={grade.grade}>
                   <TableCell className="font-medium">{grade.grade}</TableCell>
                   <TableCell className="text-right">₹{grade.tuitionFee}</TableCell>
                   <TableCell className="text-right">₹{grade.labFee}</TableCell>

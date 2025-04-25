@@ -1,12 +1,7 @@
 
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,11 +13,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <span className="font-playfair text-2xl font-bold text-school-primary">
             St. George Academy
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
@@ -35,24 +30,12 @@ const Navbar = () => {
           <a href="#campus" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
             Campus Life
           </a>
-          <a href="/gallery" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
+          <Link to="/gallery" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
             Gallery
-          </a>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium transition-colors">
-              Fee Structure
-              <ChevronDown size={16} className="inline ml-1" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-48 bg-white">
-              {[...Array(10)].map((_, i) => (
-                <DropdownMenuItem key={i + 1} className="cursor-pointer">
-                  <a href={`/fee-structure#grade-${i + 1}`} className="w-full">
-                    Grade {i + 1} Fee Structure
-                  </a>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          </Link>
+          <Link to="/fee-structure" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
+            Fee Structure
+          </Link>
           <a href="#contact" className="text-gray-700 hover:text-school-primary font-medium transition-colors">
             Contact
           </a>
@@ -94,28 +77,20 @@ const Navbar = () => {
             >
               Campus Life
             </a>
-            <a 
-              href="/gallery" 
+            <Link 
+              to="/gallery" 
               className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Gallery
-            </a>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors text-left w-full">
-                Fee Structure
-                <ChevronDown size={16} className="inline ml-1" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-48 bg-white">
-                {[...Array(10)].map((_, i) => (
-                  <DropdownMenuItem key={i + 1} className="cursor-pointer">
-                    <a href={`/fee-structure#grade-${i + 1}`} className="w-full">
-                      Grade {i + 1} Fee Structure
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            </Link>
+            <Link 
+              to="/fee-structure" 
+              className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Fee Structure
+            </Link>
             <a 
               href="#contact" 
               className="text-gray-700 hover:text-school-primary font-medium py-2 transition-colors"
